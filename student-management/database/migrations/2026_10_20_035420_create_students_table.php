@@ -11,7 +11,7 @@ return new class extends Migration
             $table->string('student_number')->unique();  //$table->string() defines a text column
             $table->string('first_name'); 
             $table->string('last_name'); 
-            $table->string('email')->unique(); 
+            $table->string('email')->unique(); //->unique() prevents duplicate values
             $table->string('course'); 
             $table->timestamps();  //Adds 'created_at' and 'updated_at'
         }); 
@@ -19,6 +19,6 @@ return new class extends Migration
  
     public function down(): void 
     { 
-        Schema::dropIfExists('students'); 
+        Schema::dropIfExists('students');  //Reverses the migration by dropping the table 
     } 
 };
