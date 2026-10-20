@@ -7,4 +7,4 @@ Route::get('/', function () {
     return redirect()->route('students.index');
 });
 
-Route::resource('students', StudentController::class);
+Route::resource('students', StudentController::class); //automatically creates seven routes for CRUD operations. 
